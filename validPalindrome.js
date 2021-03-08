@@ -4,8 +4,11 @@
 
 
 var isPalindrome = function(s) {
-  let otherS = s.split("").reverse().join("")
   s = s.replace(/[^A-Za-z0-9]/gi, '')
-  otherS = otherS.replace(/[^A-Za-z0-9]/gi, '')
+  otherS = s.split("").reverse().join("")
   return otherS.toLowerCase() === s.toLowerCase() ? true : false
 };
+
+console.log(isPalindrome('A man, a plan, a canal: Panama'))
+
+console.log(isPalindrome("hdnslgbODH"))
