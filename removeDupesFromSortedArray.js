@@ -4,11 +4,10 @@ var removeDuplicates = function (nums) {
   let i = 0
   let j = 1
   while (j < nums.length) {
-    console.log(nums)
-    if (nums[i] !== nums[j]) {
-      // we want to increment i+1 so we don't overwrite the unique number/index
+    if (nums[i] === nums[j]) {
+      // we want to increment to i+1 so we don't overwrite the unique number/index
       i+=1
-      // replace nums at this index, this effectively shifts all unique nums to the front of the array
+      // replace nums at this index, this move effectively shifts all unique nums to the front of the array
       nums[i] = nums[j]
       j++
     } else j++
