@@ -9,6 +9,7 @@ var rotate = function(nums, k) {
   for(let i = 0; i < k; i++) {
     let firstNum = nums.pop()
     nums.unshift(firstNum)
+    // one-liner is easier --> nums.unshift(nums.pop())
   }
     return nums
 };
