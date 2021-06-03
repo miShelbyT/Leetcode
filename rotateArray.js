@@ -8,6 +8,7 @@
 var rotate = function(nums, k) {
   for(let i = 0; i < k; i++) {
     let firstNum = nums.pop()
+    // .pop() returns the element that was popped off. this is why you can unshift(nums.pop())
     nums.unshift(firstNum)
     // one-liner is easier --> nums.unshift(nums.pop())
   }

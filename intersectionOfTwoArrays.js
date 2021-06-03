@@ -24,15 +24,15 @@
 // standard frequency counter
 var intersect = function (nums1, nums2) {
   let result = [];
-  let newObj = {}
+  let objOne = {}
   for (let i = 0; i < nums1.length; i++) {
-    newObj[nums1[i]] ? newObj[nums1[i]] += 1 : newObj[nums1[i]] = 1
+    objOne[nums1[i]] ? objOne[nums1[i]] += 1 : objOne[nums1[i]] = 1
   }
 
   // iterate thru second array and decrement first array, also push intersecting nums into result []
 for(let i = 0; i < nums2.length; i++){
-  if(newObj[nums2[i]] > 0) {
-    newObj[nums2[i]]--
+  if(objOne[nums2[i]] > 0) {
+    objOne[nums2[i]]--
     result.push(nums2[i])
   }
 }

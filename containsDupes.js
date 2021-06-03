@@ -14,3 +14,6 @@ var containsDuplicate = function(nums) {
   }
   return false
 };
+
+
+console.log(containsDuplicate([3,5,6,8,9,0,0]))

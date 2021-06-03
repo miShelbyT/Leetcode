@@ -57,3 +57,22 @@ function isSquared(n) {
   }
   return false
 }
+
+// 5. Given a list of unique integers nums sorted in ascending order, return the minimum i such that nums[i] == i. If there's no solution, return -1.
+
+// This should be done in \mathcal{O}(log(n))O(log(n)) time.
+
+function fixedPoint(nums) {
+  let smallest = Infinity
+        let temp = smallest
+        for(let i = 0; i < nums.length; i++) {
+            if(nums[i] === i) {
+                temp = i
+                smallest = Math.min(smallest, temp)
+            }
+        }
+       return smallest !== Infinity ? smallest : -1
+}
+
+console.log(fixedPoint([-5, -2, 0, 3, 4]))
+console.log(fixedPoint([-5, -4, 0]))
