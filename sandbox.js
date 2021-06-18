@@ -37,5 +37,32 @@
 
 // console.log(createString("iamyourlyftdriver"))
 
+// why does Infinity turn out to be less than the smallest number in the array? < does not work here
+// function solution(A) {
+//   let solution = Infinity
+//   for(let i = 0; i < A.length; i++) {
+//     if(solution > A[i]) solution = A[i]
+//     console.log(solution)
+//   }
+//   return solution
+// }
 
+
+// console.log(solution([0,30,-2,66,100]))
+
+
+
+function solution(N) {
+  const arr = N.toString().split('')
+  for(let i = arr.length-1; i >=0; i--){
+    if(arr[i] === '5') {
+      arr.splice(i,1)
+      break
+    }
+  }
+  return parseInt(arr.join(''))
+}
+
+
+console.log(solution(523567555))
 
