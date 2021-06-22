@@ -32,3 +32,13 @@ function lastSurvivor(letters, coords) {
   for(const i of coords) result.splice(i,1)
     return result[0]
   }
+
+  // or using for in loop
+
+  function lastSurvivor(letters, coords) {
+    letters = letters.split("")
+  for(let coord in coords) {
+    letters.splice(coords[coord],1)
+  }
+    return letters[0]
+  }
