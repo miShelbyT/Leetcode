@@ -95,8 +95,18 @@
 //     }
 //   }
 
-const url = "http://support001.taboola.com:8080/professional/services.html?id=taboola-network#support"
+// const url = "http://support001.taboola.com:8080/professional/services.html?id=taboola-network#support"
 
-let re = /support001/
+// let re = /support001/
 
-console.log(url.match(re))
+// console.log(url.match(re))
+
+function outer() {
+  const a = 4
+
+  return function inner(b) {
+    return a + b
+  }
+}
+
+console.log(outer()(6))
