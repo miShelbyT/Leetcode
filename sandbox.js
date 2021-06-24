@@ -101,12 +101,26 @@
 
 // console.log(url.match(re))
 
-function outer() {
-  const a = 4
+// function outer() {
+//   const a = 4
 
-  return function inner(b) {
-    return a + b
-  }
+//   return function inner(b) {
+//     return a + b
+//   }
+// }
+
+// console.log(outer()(6))
+
+let array = ["happily", "market", "flowerbed"]
+let array2 = ["happ", "ma", "not in there"]
+
+function returnSubstringOnly(array1, array2) {
+  let bigString = array1.join(" ")
+
+  array2.forEach((string, idx) => {
+    if(!bigString.includes(string)) array2.splice(idx,1)
+})
+return array2
 }
 
-console.log(outer()(6))
+console.log(returnSubstringOnly(["happily", "market", "flowerbed", "only"], ["happ", "ma", "not in there", "on"]))
