@@ -15,12 +15,20 @@
 // returns []
 
 // create mega array, bigString but have to separate by space so array1 string doesn't straddle array2
+// function inArray(array1,array2){
+//   let result = []
+//   let bigString = array2.join(" ")
+//   for(let word of array1) {
+//     if (bigString.includes(word)) result.push(word)
+//   }
+//   return result.sort()
+// }
+
+// //sexy!! .filter() and no annoying extra array
 function inArray(array1,array2){
-  let result = []
-  let bigString = array2.join(" ")
-  for(let word of array1) {
-    if (bigString.includes(word)) result.push(word)
-  }
-  return result.sort()
+  return array1.filter( e => array2.join(' ').includes(e) ).sort();
 }
 
+
+console.log('hi!')
+// console.log(inArray(["tarp", "mice", "bull"], ["lively", "alive", "harp", "sharp", "armstrong"]))
